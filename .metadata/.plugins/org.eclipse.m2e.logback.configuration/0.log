@@ -1,0 +1,20 @@
+2023-10-11 12:30:16,308 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2023-10-11 12:32:34,105 [Worker-4: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.app.discovery:DiscoveryService:0.0.1-SNAPSHOT @ C:\Users\lenovo\Desktop\SpringBootApp\DiscoveryService\pom.xml.
+2023-10-11 12:32:37,407 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/main/java
+2023-10-11 12:32:37,408 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2023-10-11 12:32:37,616 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2023-10-11 12:32:37,804 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/test/java
+2023-10-11 12:32:40,602 [Worker-4: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 1 project(s) in 9 sec
+2023-10-11 12:32:40,610 [Worker-4: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2023-10-11 12:32:41,370 [Worker-4: Import Getting Started Content] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.app.discovery:DiscoveryService:0.0.1-SNAPSHOT @ C:\Users\lenovo\Desktop\SpringBootApp\DiscoveryService\pom.xml.
+2023-10-11 12:32:42,980 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/main/java
+2023-10-11 12:32:42,981 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2023-10-11 12:32:42,982 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /DiscoveryService/src/main/resources
+2023-10-11 12:32:42,984 [Worker-4: Import Getting Started Content] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /DiscoveryService/src/test/java
+2023-10-11 12:32:44,418 [Worker-4: Import Getting Started Content] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed: 3 sec
+2023-10-11 12:32:47,728 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-11 12:32:47,772 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-11 12:32:47,780 [Worker-1: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\lenovo\Desktop\SpringBootApp\DiscoveryService\src\test\resources
+2023-10-11 12:38:40,622 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2023-10-11 12:38:40,633 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2023-10-11 12:38:40,637 [Worker-13: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory C:\Users\lenovo\Desktop\SpringBootApp\DiscoveryService\src\test\resources
