@@ -2,6 +2,8 @@ package com.app.user.domain;
 
 import java.math.BigDecimal;
 
+
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,9 +23,12 @@ public class User {
 	@GeneratedValue
 	@Id
 	private int id;
+	private String userId;
 	@Column(name = "employeeName")
 	private String username;
 	@Column(name = "Salary")
 	private BigDecimal amount;
+	private String password;
+	private String encryptedPassword;
 
 }
