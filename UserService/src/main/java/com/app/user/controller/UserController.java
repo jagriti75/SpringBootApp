@@ -1,8 +1,6 @@
 package com.app.user.controller;
 
 
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
 import org.springframework.http.HttpStatus;
@@ -13,8 +11,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.app.user.domain.User;
+import com.app.user.domain.UserEntity;
 import com.app.user.service.UserService;
+
+import jakarta.ws.rs.core.MediaType;
 
 @RestController
 @RequestMapping("/users")
@@ -32,9 +32,12 @@ public class UserController {
 		return "hello everybody on "+env.getProperty("local.server.port");
 	}
 	
-	@PostMapping("/create/user")
-	public ResponseEntity<User> createUser(@RequestBody User user) {
+	@PostMapping(consumes = {MediaType.APPLICATION_XML ,MediaType.APPLICATION_JSON}
+	,produces = {MediaType.APPLICATION_JSON , MediaType.APPLICATION_XML})
+	public ResponseEntity<UserEntity> createUser(@RequestBody UserEntity user) {
 		service.createUser(user);
-		return new ResponseEntity<User>(user , HttpStatus.CREATED);
+		return new ResponseEntity<UserEntity>(user , HttpStatus.CREATED);
 	}
+	
+	
 }

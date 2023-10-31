@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name="Employee")
 @Entity
-public class User {
+public class UserEntity {
 	
 	@GeneratedValue
 	@Id
@@ -28,6 +28,7 @@ public class User {
 	private String username;
 	@Column(name = "Salary")
 	private BigDecimal amount;
+	private String email;
 	private String password;
 	private String encryptedPassword;
 
