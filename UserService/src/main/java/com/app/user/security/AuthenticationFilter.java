@@ -1,11 +1,11 @@
 package com.app.user.security;
 
 import java.io.IOException;
-import java.security.Key;
 import java.time.Instant;
 import java.util.Base64;
 import java.util.Date;
 
+import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
 
 import org.springframework.core.env.Environment;
@@ -22,8 +22,6 @@ import com.app.user.service.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import io.jsonwebtoken.Jwts;
-import io.jsonwebtoken.SignatureAlgorithm;
-import io.jsonwebtoken.security.Keys;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -66,15 +64,15 @@ public class AuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 		    
 		    byte[] secretKeyBytes = Base64.getEncoder().encode(tokenSecret.getBytes());
 		    
-		    Key secretKey = Keys.hmacShaKeyFor(secretKeyBytes);
+		    SecretKey signingKey = new SecretKeySpec(secretKeyBytes ,"HmacSHA256");
 		    
 		    String token = Jwts.builder().claims().subject(userDetails.getUserId())
 		    						.expiration(Date.from(Instant.now().plusMillis(3600000)))
 		    						.issuedAt(Date.from(Instant.now()))
 		    						.and()
-		    						.signWith(secretKey)
+		    						.signWith(signingKey)
 		    						.compact();
-		    
+		    logger.info("token while logging in "+ token);
 		    res.addHeader("token", token);
 		    res.addHeader("userId", userDetails.getUserId());
 		    
