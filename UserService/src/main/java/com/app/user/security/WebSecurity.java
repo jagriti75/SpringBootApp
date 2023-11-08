@@ -1,5 +1,7 @@
 package com.app.user.security;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
@@ -17,6 +19,8 @@ import com.app.user.service.UserService;
 @Configuration
 @EnableWebSecurity
 public class WebSecurity {
+	
+	Logger logger = LoggerFactory.getLogger(this.getClass());
 	
 	private Environment environment;
 	private UserService userService;
@@ -43,10 +47,11 @@ public class WebSecurity {
 		//Customized loginURL path 
 		authenticationFilter.setFilterProcessesUrl("/login");
 		http.csrf(csrf -> csrf.disable());
-		
 		http.authorizeHttpRequests(auth -> auth.requestMatchers(new AntPathRequestMatcher("/users")).permitAll()
 			.requestMatchers(new AntPathRequestMatcher("/h2-console/**")).permitAll()
-			.requestMatchers(new AntPathRequestMatcher("/users/greet")).authenticated()
+			.requestMatchers(new AntPathRequestMatcher("/users/greet")).permitAll()
+			
+			
 		)
 		.addFilter(authenticationFilter)
 		.authenticationManager(authenticationManager)

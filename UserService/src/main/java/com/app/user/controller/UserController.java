@@ -26,7 +26,6 @@ public class UserController {
 	@Autowired
 	UserService service;
 
-	
 	@GetMapping("/greet")
 	public String sayHello() {
 		return "hello everybody on "+env.getProperty("local.server.port");
