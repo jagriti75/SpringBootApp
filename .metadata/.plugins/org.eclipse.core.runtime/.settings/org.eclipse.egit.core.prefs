@@ -1,4 +1,5 @@
-GitRepositoriesView.GitDirectories=
-GitRepositoriesView.GitDirectories.relative=
+GitRepositoriesView.GitDirectories=C\:\\Users\\lenovo\\Desktop\\SpringBootApp\\.git;
+GitRepositoriesView.GitDirectories.relative=.git;
+RepositorySearchDialogSearchPath=C\:\\Users\\lenovo\\Desktop\\SpringBootApp
 core_autoIgnoreDerivedResources=false
 eclipse.preferences.version=1
